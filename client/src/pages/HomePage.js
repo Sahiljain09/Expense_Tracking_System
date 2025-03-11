@@ -137,7 +137,7 @@ const HomePage = () => {
             className="btn btn-primary"
             onClick={() => setShowModal(true)}
           >
-            Add New
+            Add new
           </button>
         </div>
       </div>
