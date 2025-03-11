@@ -5,6 +5,7 @@ import Layout from "./../components/Layout/Layout";
 import axios from "axios";
 import Spinner from "./../components/Spinner";
 import moment from "moment";
+import Analytics from "../components/Analytics";
 const { RangePicker } = DatePicker;
 
 const HomePage = () => {
@@ -141,7 +142,10 @@ const HomePage = () => {
         </div>
       </div>
       <div className="content">
-        <Table columns={columns} dataSource={allTransection} />
+        {ViewData === 'table' ? <Table columns={columns} dataSource={allTransection} />
+        : <Analytics allTransection = {allTransection} />
+        }
+        
       </div>
       <Modal
         title="Add Transection"
